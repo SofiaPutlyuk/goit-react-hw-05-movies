@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-05-movies/static/css/main.e6c13ad2.css",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.313860a6.js",
+    "static/js/489.cf291a12.chunk.js": "/goit-react-hw-05-movies/static/js/489.cf291a12.chunk.js",
+    "static/js/298.f23b1b3f.chunk.js": "/goit-react-hw-05-movies/static/js/298.f23b1b3f.chunk.js",
+    "static/js/117.bbc2d511.chunk.js": "/goit-react-hw-05-movies/static/js/117.bbc2d511.chunk.js",
+    "static/js/28.b2365c88.chunk.js": "/goit-react-hw-05-movies/static/js/28.b2365c88.chunk.js",
+    "static/js/258.67635765.chunk.js": "/goit-react-hw-05-movies/static/js/258.67635765.chunk.js",
+    "static/js/453.d6aac798.chunk.js": "/goit-react-hw-05-movies/static/js/453.d6aac798.chunk.js",
+    "static/js/639.3c415325.chunk.js": "/goit-react-hw-05-movies/static/js/639.3c415325.chunk.js",
+    "static/js/184.3c1adf9b.chunk.js": "/goit-react-hw-05-movies/static/js/184.3c1adf9b.chunk.js",
+    "index.html": "/goit-react-hw-05-movies/index.html",
+    "main.e6c13ad2.css.map": "/goit-react-hw-05-movies/static/css/main.e6c13ad2.css.map",
+    "main.313860a6.js.map": "/goit-react-hw-05-movies/static/js/main.313860a6.js.map",
+    "489.cf291a12.chunk.js.map": "/goit-react-hw-05-movies/static/js/489.cf291a12.chunk.js.map",
+    "298.f23b1b3f.chunk.js.map": "/goit-react-hw-05-movies/static/js/298.f23b1b3f.chunk.js.map",
+    "117.bbc2d511.chunk.js.map": "/goit-react-hw-05-movies/static/js/117.bbc2d511.chunk.js.map",
+    "28.b2365c88.chunk.js.map": "/goit-react-hw-05-movies/static/js/28.b2365c88.chunk.js.map",
+    "258.67635765.chunk.js.map": "/goit-react-hw-05-movies/static/js/258.67635765.chunk.js.map",
+    "453.d6aac798.chunk.js.map": "/goit-react-hw-05-movies/static/js/453.d6aac798.chunk.js.map",
+    "639.3c415325.chunk.js.map": "/goit-react-hw-05-movies/static/js/639.3c415325.chunk.js.map",
+    "184.3c1adf9b.chunk.js.map": "/goit-react-hw-05-movies/static/js/184.3c1adf9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.313860a6.js"
+  ]
+}
