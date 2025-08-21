@@ -1,5 +1,6 @@
 {
   "name": "film-search-project",
+  "homepage": "https://sofiaputlyuk.github.io/goit-react-hw-05-movies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
