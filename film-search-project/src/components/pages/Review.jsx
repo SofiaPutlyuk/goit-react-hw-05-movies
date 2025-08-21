@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
-export const Review = () => {
+ const Review = () => {
     const { movieId } = useParams()
     const [review, setReview] = useState([])
     const fetchReview = useCallback(async () => {
@@ -35,3 +35,4 @@ export const Review = () => {
         </div>
     )
 }
+export default Review;
