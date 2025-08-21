@@ -1,6 +1,63 @@
 import { useCallback, useState, useEffect } from "react"
-import { useLocation, useNavigate, useParams, Link, Outlet } from "react-router-dom"
-export const DetailPage = () => {
+import { useLocation, useNavigate, useParams, Link, Outlet } from "react-router-dom";
+import { FaChevronCircleLeft } from "react-icons/fa";
+import styled from "styled-components";
+const DetailContainer = styled.div`
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width:1000px;
+  align-items:center;
+  margin:auto;
+  height:700px;
+  border-radius:20px;
+  justify-content: space-evenly;
+  padding: 40px 0px 40px 0px;
+
+`
+const ContainerText = styled.div`
+display:flex;
+flex-direction:column;
+align-items:center;
+width:300px;
+gap:25px;
+`
+const Text = styled.p`
+margin:0;
+`
+const Image = styled.img`
+    width:400px;
+    height:600px;
+`
+const Button = styled.button`
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff00ff, #00ffff, #fffb00);
+  background-size: 300% 300%;
+  animation: neonGradient 6s ease infinite;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff, 0 0 30px #fffb00;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff, 0 0 60px #fffb00;
+  }
+
+  @keyframes neonGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+`
+const DetailPage = () => {
     const [detail, setDetail] = useState([])
     const { movieId } = useParams()
     const location = useLocation()
@@ -36,21 +93,28 @@ export const DetailPage = () => {
         }
     }
     return (
-        <div>
-            <Link to={backLink}>Go back</Link>
-            <p>{detail.original_title || detail.name}</p>
-            <p>User score: {Math.round(detail.vote_average * 10)}%</p>
-            <img src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`} alt={detail.original_title || detail.name}  />
-            <p>Overview</p>
-            <p>{detail.overview}</p>
+        <>
+        <Link to={backLink}><FaChevronCircleLeft /></Link>
+        <DetailContainer>
+              <div>
+            <Image src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`} alt={detail.original_title || detail.name}  />
+            </div>
+            <ContainerText>
+            <Text>{detail.original_title || detail.name}</Text>
+            <Text>User score: {Math.round(detail.vote_average * 10)}%</Text>
+            <Text>Overview</Text>
+            <Text>{detail.overview}</Text>
             {detail.genres && detail.genres.map((genre , index) => (
-                <p key={index}>{genre.name}</p>
+                <Text key={index}>{genre.name}</Text>
             ))}
-            <button onClick={handleToggleCast}>
+            <Button onClick={handleToggleCast}>
                 Cast
-            </button>
-            <button onClick={handleToggleReview}>Review</button>
-            <Outlet />
-        </div>
+            </Button>
+            <Button onClick={handleToggleReview}>Review</Button>
+            </ContainerText>
+        </DetailContainer>
+         <Outlet />
+        </>
     )
 }
+export default DetailPage;
